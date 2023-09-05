@@ -50,6 +50,7 @@ def add_linked_pic(r: Run, image_path: str, width: Length, height: Length) -> In
 
     # Now from here: inline = cls.new(cx, cy, shape_id, pic)
     inline = CT_Inline.new(cx, cy, shape_id, pic)
-    inline = r._r.add_drawing(inline)
+    
+    r._r.add_drawing(inline)
 
     return InlineShape(inline)
